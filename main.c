@@ -1,4 +1,5 @@
 #include <stdio.h>
+// #define NDEBUG // essentially turns off assert()
 #include <assert.h>
 
 int main()
