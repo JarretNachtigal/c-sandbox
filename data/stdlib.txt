@@ -1,0 +1,74 @@
+This is the unsigned integral type and is the result of the sizeof keyword.
+size_t
+This is an integer type of the size of a wide character constant.
+wchar_t
+This is the structure returned by the div function.
+div_t
+This is the structure returned by the ldiv function.
+ldiv_t
+This macro is the value of a null pointer constant.
+NULL
+This is the value for the exit function to return in case of failure.
+EXIT_FAILURE
+This is the value for the exit function to return in case of success.	
+EXIT_SUCCESS
+This macro is the maximum value returned by the rand function.
+RAND_MAX
+This macro is the maximum number of bytes in a multi-byte character set which cannot be larger than MB_LEN_MAX.
+MB_CUR_MAX
+Converts the string pointed to, by the argument str to a floating-point number (type double).
+double atof(const char *str)
+Converts the string pointed to, by the argument str to an integer (type int).
+int atoi(const char *str)
+Converts the string pointed to, by the argument str to a long integer (type long int).
+long int atol(const char *str)
+Converts the string pointed to, by the argument str to a floating-point number (type double).
+double strtod(const char *str, char **endptr)
+Converts the string pointed to, by the argument str to a long integer (type long int).
+long int strtol(const char *str, char **endptr, int base)
+Converts the string pointed to, by the argument str to an unsigned long integer (type unsigned long int).
+unsigned long int strtoul(const char *str, char **endptr, int base)
+Allocates the requested memory and returns a pointer to it.
+void *calloc(size_t nitems, size_t size)
+Deallocates the memory previously allocated by a call to calloc, malloc, or realloc.
+void free(void *ptr)
+Allocates the requested memory and returns a pointer to it.
+void *malloc(size_t size)
+Attempts to resize the memory block pointed to by ptr that was previously allocated with a call to malloc or calloc.
+void *realloc(void *ptr, size_t size)
+Causes an abnormal program termination.
+void abort(void)
+Causes the specified function func to be called when the program terminates normally.
+int atexit(void (*func)(void))
+Causes the program to terminate normally.
+void exit(int status)
+Searches for the environment string pointed to by name and returns the associated value to the string.
+char *getenv(const char *name)
+The command specified by string is passed to the host environment to be executed by the command processor.
+int system(const char *string)
+Performs a binary search.
+void *bsearch(const void *key, const void *base, size_t nitems, size_t size, int (*compar)(const void *, const void *))
+Sorts an array.
+void qsort(void *base, size_t nitems, size_t size, int (*compar)(const void *, const void*))
+Returns the absolute value of x.
+int abs(int x)
+Divides numer (numerator) by denom (denominator).
+div_t div(int numer, int denom)
+Returns the absolute value of x.
+long int labs(long int x)
+Divides numer (numerator) by denom (denominator).
+ldiv_t ldiv(long int numer, long int denom)
+Returns a pseudo-random number in the range of 0 to RAND_MAX.
+int rand(void)
+This function seeds the random number generator used by the function rand.
+void srand(unsigned int seed)
+Returns the length of a multibyte character pointed to by the argument str.
+int mblen(const char *str, size_t n)
+Converts the string of multibyte characters pointed to by the argument str to the array pointed to by pwcs.
+size_t mbstowcs(schar_t *pwcs, const char *str, size_t n)
+Examines the multibyte character pointed to by the argument str.
+int mbtowc(whcar_t *pwc, const char *str, size_t n)
+Converts the codes stored in the array pwcs to multibyte characters and stores them in the string str.
+size_t wcstombs(char *str, const wchar_t *pwcs, size_t n)
+Examines the code which corresponds to a multibyte character given by the argument wchar.
+int wctomb(char *str, wchar_t wchar)
