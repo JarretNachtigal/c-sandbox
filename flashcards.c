@@ -44,10 +44,14 @@ int main()
     }
 
     struct fileContents data = readFile(filename);
-
+    free(filename);
     for (int i = 0; i < data.len; i += 2)
     {
         printf("%s\n", data.contents[i]);
+        char *ans = (char *)malloc(40);
+        printf("which function does this describe: ");
+        scanf("%s", ans);
+        // if (strncmp(ans, data.contents[i+1]))
         printf("%s\n", data.contents[i + 1]);
     }
     return 0;
