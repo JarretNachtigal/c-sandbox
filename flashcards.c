@@ -29,6 +29,8 @@ int main()
     char *filename = (char *)malloc(20);
     int in = 0;
     scanf("%d", &in); // scanf leaves something in the input buffer, messing up fgets
+    while ((getchar()) != '\n')
+        ; // clear buffer
 
     if (in == 0)
     {
@@ -42,6 +44,10 @@ int main()
     {
         strncpy(filename, "data/ctype.txt\0", 20);
     }
+    else
+    {
+        strncpy(filename, "data/test.txt\0", 20);
+    }
 
     struct fileContents data = readFile(filename);
     free(filename);
@@ -50,8 +56,6 @@ int main()
     {
         printf("%s\n", data.contents[i]);
         printf("which function does this describe: \n");
-        while ((getchar()) != '\n')
-            ; // clear stdin buffer
         fgets(ans, sizeof(ans), stdin);
         printf("your answer was : %s\n", ans);
         // if (strncmp(ans, data.contents[i+1]))
